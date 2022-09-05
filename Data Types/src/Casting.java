@@ -9,6 +9,9 @@ public static void main(String[] args) {
     System.out.println(number2);
     double number3 =123.23d;
     int number4= (int)number3;
+    String number5= "2";
+    int y = Integer.parseInt(number5)+2;
+    System.out.println("parse "+y);
     System.out.println(number3);
     System.out.println(number4);
 

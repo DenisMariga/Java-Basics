@@ -7,6 +7,11 @@ public class forl {
         }
         for (int k = 5; k>0;k--){
             System.out.println(k);
+         }
+        int r =1;
+        while(r<=6){
+            System.out.println(r);
+            r++;
         }
     }
 }

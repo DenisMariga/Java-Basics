@@ -7,5 +7,6 @@ public class doLoop {
             System.out.println("Count: "+ count);
             count++;
         }while(count<10);
+        String s ="Hello world";
     }
 }

@@ -5,14 +5,19 @@ import src.Declarative.person;
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
+import java.util.Map;
+import java.util.stream.Collectors;
 
-public class Min_Max {
+public class group {
     public static void main(String[] args) {
         List<person> people = getPeople();
-        people.stream().min(Comparator.comparing(person::getAge)).ifPresent(System.out::println);
-        Optional<String> oldestFemale = people.stream().filter(person -> person.getGender().equals(gender.FEMALE)).max(Comparator.comparing(person::getAge)).map(person::getF_name);
-        oldestFemale.ifPresent(System.out::println);
+        Map<gender, List<person>> groupByGender =
+                people.stream().collect(Collectors.groupingBy(person::getGender));
+        groupByGender.forEach((gender,people1)->{
+            System.out.println(gender);
+            people1.forEach(System.out::println);
+        });
+
     }
     private static List<person> getPeople() {
         return List.of(

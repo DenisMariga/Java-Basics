@@ -20,7 +20,12 @@ public class treasure {
       
         if (optionColor == "Yellow"){
         System.out.println("you win!");
-       }else{
+       }else if (optionColor == "blue") {
+        System.out.println("You entered a room full of beasts");
+       }else if (optionColor == "red") {
+        System.out.println("you entered a room full of fire");
+       }
+       else{
         System.out.println("game ended");
       }
     }}
